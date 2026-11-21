@@ -3,120 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Práctico 1: maquetando con Flexbox">
-  <title>Práctico 1 | Maquetando con Flexbox</title>
+  <meta name="description" content="Tienda de tecnología - Práctico 1 de Flexbox">
+  <title>Electro Store | Práctico 1</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Encabezado: Flexbox centra el título y el subtítulo verticalmente. -->
-  <header class="encabezado">
-    <p class="etiqueta">DISEÑO WEB · CSS</p>
-    <h1>Práctico 1</h1>
-    <p class="subtitulo">Maquetando con Flexbox</p>
-  </header>
+  <!-- Barra superior: Flexbox separa el texto de información y los iconos. -->
+  <div class="top-strip">
+    <span>ENVÍOS A TODO EL PAÍS · OFERTAS DE TEMPORADA</span>
+    <span>Atención al cliente: 0800-555-2026</span>
+  </div>
 
-  <main class="contenedor">
-    <!-- Presentación: Flexbox distribuye los datos del alumno en una fila. -->
-    <section class="datos">
-      <div><strong>Nombre:</strong> __________________________</div>
-      <div><strong>Grupo:</strong> ____________________________</div>
-    </section>
-
-    <!-- Navegación: display:flex y gap separan los enlaces horizontalmente. -->
-    <nav class="navegacion" aria-label="Navegación principal">
-      <a href="#flexbox">Flexbox</a>
-      <a href="#galeria">Galería</a>
+  <!-- Navegación: Flexbox distribuye logo, menú y acciones en una sola fila. -->
+  <header class="navbar">
+    <a class="brand" href="#"><span class="brand-mark">E</span> Electro<span>Store</span></a>
+    <nav class="menu">
+      <a href="#">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#novedades">Novedades</a>
       <a href="#contacto">Contacto</a>
     </nav>
+    <div class="nav-actions"><span>⌕</span><span>♡</span><span>🛒</span></div>
+  </header>
 
-    <!-- Sección principal: flex-direction coloca texto e ilustración uno al lado del otro. -->
-    <section class="presentacion" id="flexbox">
-      <div class="presentacion-texto">
-        <span class="tag">CSS · DISEÑO RESPONSIVE</span>
-        <h2>Organizá tus elementos fácilmente</h2>
-        <p>Flexbox es una herramienta de CSS que permite ordenar, alinear y distribuir
-          elementos dentro de un contenedor. Se adapta al espacio disponible y facilita
-          la creación de páginas que funcionan en computadoras y celulares.</p>
-        <a class="boton" href="#galeria">Ver galería</a>
+  <main>
+    <!-- Banner principal: Flexbox coloca el texto a la izquierda y los productos a la derecha. -->
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="hero-kicker">TECNOLOGÍA PARA VOS</span>
+        <h1>Todo lo que<br> buscás, en un solo lugar.</h1>
+        <p>Descubrí nuestra selección de tecnología y accesorios.</p>
+        <a class="hero-button" href="#productos">Comprar ahora <span>→</span></a>
       </div>
-      <div class="tarjeta-ejemplo" aria-label="Ejemplo visual de elementos alineados">
-        <div class="mini-caja caja-uno">01</div>
-        <div class="mini-caja caja-dos">02</div>
-        <div class="mini-caja caja-tres">03</div>
-        <small>Elementos alineados con Flexbox</small>
+      <div class="hero-art" aria-label="Productos tecnológicos destacados">
+        <div class="glow"></div>
+        <img class="hero-laptop" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=900&auto=format&fit=crop&q=85" alt="Computadora portátil">
+        <img class="hero-phone" src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&auto=format&fit=crop&q=85" alt="Teléfono celular">
+        <img class="hero-tablet" src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500&auto=format&fit=crop&q=85" alt="Tablet">
       </div>
+      <div class="hero-caption">TECNOLOGÍA · DISEÑO · INNOVACIÓN</div>
     </section>
 
-    <!-- Características: flex-wrap permite que las tarjetas pasen a otra fila si falta espacio. -->
-    <section class="seccion">
-      <div class="titulo-seccion">
-        <span class="tag">01 / CONCEPTOS</span>
-        <h2>¿Qué podemos hacer con Flexbox?</h2>
-        <p>Estas son algunas propiedades importantes.</p>
-      </div>
-      <div class="caracteristicas">
-        <article class="caracteristica">
-          <span class="numero">01</span>
-          <h3>Dirección</h3>
-          <p><code>flex-direction</code> define si los elementos se ordenan en fila o en columna.</p>
-        </article>
-        <article class="caracteristica">
-          <span class="numero">02</span>
-          <h3>Alineación</h3>
-          <p><code>justify-content</code> y <code>align-items</code> permiten alinear los elementos.</p>
-        </article>
-        <article class="caracteristica">
-          <span class="numero">03</span>
-          <h3>Adaptación</h3>
-          <p><code>flex-wrap</code> permite que los elementos bajen a otra línea cuando es necesario.</p>
-        </article>
-      </div>
-    </section>
+    <div class="page-content" id="productos">
+      <!-- Dos categorías superiores: Flexbox reparte las categorías en dos columnas. -->
+      <section class="category-row">
+        <div class="category">
+          <div class="section-heading"><h2>Productos destacados</h2><a href="#">Ver todos ↗</a></div>
+          <div class="product-row">
+            <article class="product-card">
+              <span class="flag">NUEVO</span>
+              <img src="https://images.unsplash.com/photo-1592840496694-26d035b52b48?w=400&auto=format&fit=crop&q=80" alt="Control de videojuegos">
+              <h3>Joystick inalámbrico</h3><p class="price">$ 45.900 <small>· En stock</small></p>
+            </article>
+            <article class="product-card">
+              <span class="flag">NUEVO</span>
+              <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400&auto=format&fit=crop&q=80" alt="Cámara digital">
+              <h3>Cámara digital</h3><p class="price">$ 189.000 <small>· En stock</small></p>
+            </article>
+            <article class="product-card">
+              <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&auto=format&fit=crop&q=80" alt="Smartphone">
+              <h3>Smartphone</h3><p class="price">$ 320.000 <small>· En stock</small></p>
+            </article>
+            <article class="product-card">
+              <img src="https://images.unsplash.com/photo-1504274066651-8d31a536b11a?w=400&auto=format&fit=crop&q=80" alt="Cámara fotográfica">
+              <h3>Cámara compacta</h3><p class="price">$ 155.000 <small>· En stock</small></p>
+            </article>
+          </div>
+        </div>
 
-    <!-- Galería: Flexbox organiza los productos en filas y permite ajustar su distribución. -->
-    <section class="seccion" id="galeria">
-      <div class="titulo-seccion">
-        <span class="tag">02 / GALERÍA</span>
-        <h2>Galería de tecnología</h2>
-        <p>Ejemplo de tarjetas de productos distribuidas con Flexbox.</p>
-      </div>
-      <div class="galeria">
-        <article class="producto">
-          <div class="producto-imagen imagen-pc" role="img" aria-label="Computadora"></div>
-          <div class="producto-info"><h3>Computadora</h3><p>Potencia para estudiar y trabajar.</p></div>
-        </article>
-        <article class="producto">
-          <div class="producto-imagen imagen-audio" role="img" aria-label="Auriculares"></div>
-          <div class="producto-info"><h3>Auriculares</h3><p>Sonido para todos los días.</p></div>
-        </article>
-        <article class="producto">
-          <div class="producto-imagen imagen-reloj" role="img" aria-label="Reloj inteligente"></div>
-          <div class="producto-info"><h3>Reloj inteligente</h3><p>Información al alcance de tu mano.</p></div>
-        </article>
-        <article class="producto">
-          <div class="producto-imagen imagen-celular" role="img" aria-label="Celular"></div>
-          <div class="producto-info"><h3>Celular</h3><p>Conectividad en cualquier lugar.</p></div>
-        </article>
-      </div>
-    </section>
+        <div class="category">
+          <div class="section-heading"><h2>Audio y accesorios</h2><a href="#">Ver todos ↗</a></div>
+          <div class="product-row">
+            <article class="product-card">
+              <span class="flag">NUEVO</span>
+              <img src="https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=400&auto=format&fit=crop&q=80" alt="Parlante">
+              <h3>Parlante portátil</h3><p class="price">$ 62.000 <small>· En stock</small></p>
+            </article>
+            <article class="product-card">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&auto=format&fit=crop&q=80" alt="Auriculares">
+              <h3>Auriculares</h3><p class="price">$ 38.500 <small>· En stock</small></p>
+            </article>
+            <article class="product-card">
+              <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&auto=format&fit=crop&q=80" alt="Auriculares negros">
+              <h3>Headphones</h3><p class="price">$ 79.900 <small>· En stock</small></p>
+            </article>
+            <article class="product-card">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&auto=format&fit=crop&q=80" alt="Reloj inteligente">
+              <h3>Smartwatch</h3><p class="price">$ 95.000 <small>· En stock</small></p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <!-- Demostración: justify-content centra horizontalmente y align-items centra verticalmente. -->
-    <section class="seccion">
-      <div class="titulo-seccion">
-        <span class="tag">03 / ALINEACIÓN</span>
-        <h2>Prueba de alineación</h2>
-        <p>Los tres bloques están centrados horizontal y verticalmente.</p>
-      </div>
-      <div class="zona-alineacion">
-        <div class="bloque">A</div><div class="bloque">B</div><div class="bloque">C</div>
-      </div>
-    </section>
+      <!-- Banners promocionales: Flexbox alinea las dos promociones en una fila. -->
+      <section class="promo-row" id="ofertas">
+        <a class="promo promo-one" href="#">
+          <div><span>OFERTA ESPECIAL</span><h2>Sonido y fotografía<br>para cada momento.</h2><b>Descubrí más →</b></div>
+          <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&auto=format&fit=crop&q=80" alt="Cámara en promoción">
+        </a>
+        <a class="promo promo-two" href="#">
+          <div><span>ÚLTIMA TECNOLOGÍA</span><h2>Accesorios que<br>hacen la diferencia.</h2><b>Ver colección →</b></div>
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=80" alt="Auriculares en promoción">
+        </a>
+      </section>
 
-    <!-- Pie: Flexbox separa el texto de los enlaces y permite que se acomoden en pantallas pequeñas. -->
-    <footer id="contacto">
-      <p>Práctico 1 · Maquetando con Flexbox</p>
-      <p>Realizado con HTML y CSS</p>
-    </footer>
+      <!-- Listados inferiores: flex-wrap acomoda seis productos por fila en escritorio. -->
+      <section class="category-row lower-row" id="novedades">
+        <div class="category">
+          <div class="section-heading"><h2>Electrónica y gadgets</h2><a href="#">Ver todos ↗</a></div>
+          <div class="product-row six">
+            <article class="product-card"><span class="flag">OFERTA</span><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&auto=format&fit=crop&q=80" alt="Auriculares"><h3>Auriculares Pro</h3><p class="price">$ 55.000 <small>· En stock</small></p></article>
+            <article class="product-card"><span class="flag">NUEVO</span><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=400&auto=format&fit=crop&q=80" alt="Cámara"><h3>Cámara compacta</h3><p class="price">$ 210.000 <small>· En stock</small></p></article>
+            <article class="product-card"><span class="flag">NUEVO</span><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&auto=format&fit=crop&q=80" alt="Celular"><h3>Celular Nova</h3><p class="price">$ 285.000 <small>· En stock</small></p></article>
+            <article class="product-card"><span class="flag">OFERTA</span><img src="https://images.unsplash.com/photo-1504274066651-8d31a536b11a?w=400&auto=format&fit=crop&q=80" alt="Cámara fotográfica"><h3>Cámara digital</h3><p class="price">$ 175.000 <small>· En stock</small></p></article>
+            <article class="product-card"><span class="flag">NUEVO</span><img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&auto=format&fit=crop&q=80" alt="Tablet"><h3>Tablet Air</h3><p class="price">$ 230.000 <small>· En stock</small></p></article>
+            <article class="product-card"><span class="flag">OFERTA</span><img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&auto=format&fit=crop&q=80" alt="Auriculares"><h3>Auriculares Beat</h3><p class="price">$ 69.000 <small>· En stock</small></p></article>
+          </div>
+        </div>
+        <div class="category">
+          <div class="section-heading"><h2>Lo más elegido</h2><a href="#">Ver todos ↗</a></div>
+          <div class="product-row six">
+            <article class="product-card"><span class="flag">NUEVO</span><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&auto=format&fit=crop&q=80" alt="Notebook"><h3>Notebook Slim</h3><p class="price">$ 890.000 <small>· En stock</small></p></article>
+            <article class="product-card"><span class="flag">OFERTA</span><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&auto=format&fit=crop&q=80" alt="Reloj"><h3>Smartwatch Fit</h3><p class="price">$ 99.000 <small>· En stock</small></p></article>
+            <article class="product-card"><span class="flag">NUEVO</span><img src="https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=400&auto=format&fit=crop&q=80" alt="Parlante"><h3>Parlante Mini</h3><p class="price">$ 42.000 <small>· En stock</small></p></article>
+            <article class="product-card"><span class="flag">OFERTA</span><img src="https://images.unsplash.com/photo-1592840496694-26d035b52b48?w=400&auto=format&fit=crop&q=80" alt="Control"><h3>Control Gamer</h3><p class="price">$ 49.000 <small>· En stock</small></p></article>
+            <article class="product-card"><span class="flag">NUEVO</span><img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&auto=format&fit=crop&q=80" alt="Tablet"><h3>Tablet Plus</h3><p class="price">$ 260.000 <small>· En stock</small></p></article>
+            <article class="product-card"><span class="flag">OFERTA</span><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&auto=format&fit=crop&q=80" alt="Auriculares"><h3>Audio Pro</h3><p class="price">$ 72.000 <small>· En stock</small></p></article>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
+
+  <!-- Pie de página: Flexbox separa marca y datos de contacto. -->
+  <footer id="contacto"><a class="brand" href="#"><span class="brand-mark">E</span> Electro<span>Store</span></a><p>Práctico 1 · Maquetando con Flexbox</p><p>HTML + CSS · Diseño adaptable</p></footer>
 </body>
 </html>
