@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Práctico 1: maquetando con Flexbox">
+  <title>Práctico 1 | Maquetando con Flexbox</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Encabezado: Flexbox centra el título y el subtítulo verticalmente. -->
+  <header class="encabezado">
+    <p class="etiqueta">DISEÑO WEB · CSS</p>
+    <h1>Práctico 1</h1>
+    <p class="subtitulo">Maquetando con Flexbox</p>
+  </header>
+
+  <main class="contenedor">
+    <!-- Presentación: Flexbox distribuye los datos del alumno en una fila. -->
+    <section class="datos">
+      <div><strong>Nombre:</strong> __________________________</div>
+      <div><strong>Grupo:</strong> ____________________________</div>
+    </section>
+
+    <!-- Navegación: display:flex y gap separan los enlaces horizontalmente. -->
+    <nav class="navegacion" aria-label="Navegación principal">
+      <a href="#flexbox">Flexbox</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- Sección principal: flex-direction coloca texto e ilustración uno al lado del otro. -->
+    <section class="presentacion" id="flexbox">
+      <div class="presentacion-texto">
+        <span class="tag">CSS · DISEÑO RESPONSIVE</span>
+        <h2>Organizá tus elementos fácilmente</h2>
+        <p>Flexbox es una herramienta de CSS que permite ordenar, alinear y distribuir
+          elementos dentro de un contenedor. Se adapta al espacio disponible y facilita
+          la creación de páginas que funcionan en computadoras y celulares.</p>
+        <a class="boton" href="#galeria">Ver galería</a>
+      </div>
+      <div class="tarjeta-ejemplo" aria-label="Ejemplo visual de elementos alineados">
+        <div class="mini-caja caja-uno">01</div>
+        <div class="mini-caja caja-dos">02</div>
+        <div class="mini-caja caja-tres">03</div>
+        <small>Elementos alineados con Flexbox</small>
+      </div>
+    </section>
+
+    <!-- Características: flex-wrap permite que las tarjetas pasen a otra fila si falta espacio. -->
+    <section class="seccion">
+      <div class="titulo-seccion">
+        <span class="tag">01 / CONCEPTOS</span>
+        <h2>¿Qué podemos hacer con Flexbox?</h2>
+        <p>Estas son algunas propiedades importantes.</p>
+      </div>
+      <div class="caracteristicas">
+        <article class="caracteristica">
+          <span class="numero">01</span>
+          <h3>Dirección</h3>
+          <p><code>flex-direction</code> define si los elementos se ordenan en fila o en columna.</p>
+        </article>
+        <article class="caracteristica">
+          <span class="numero">02</span>
+          <h3>Alineación</h3>
+          <p><code>justify-content</code> y <code>align-items</code> permiten alinear los elementos.</p>
+        </article>
+        <article class="caracteristica">
+          <span class="numero">03</span>
+          <h3>Adaptación</h3>
+          <p><code>flex-wrap</code> permite que los elementos bajen a otra línea cuando es necesario.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Galería: Flexbox organiza los productos en filas y permite ajustar su distribución. -->
+    <section class="seccion" id="galeria">
+      <div class="titulo-seccion">
+        <span class="tag">02 / GALERÍA</span>
+        <h2>Galería de tecnología</h2>
+        <p>Ejemplo de tarjetas de productos distribuidas con Flexbox.</p>
+      </div>
+      <div class="galeria">
+        <article class="producto">
+          <div class="producto-imagen imagen-pc" role="img" aria-label="Computadora"></div>
+          <div class="producto-info"><h3>Computadora</h3><p>Potencia para estudiar y trabajar.</p></div>
+        </article>
+        <article class="producto">
+          <div class="producto-imagen imagen-audio" role="img" aria-label="Auriculares"></div>
+          <div class="producto-info"><h3>Auriculares</h3><p>Sonido para todos los días.</p></div>
+        </article>
+        <article class="producto">
+          <div class="producto-imagen imagen-reloj" role="img" aria-label="Reloj inteligente"></div>
+          <div class="producto-info"><h3>Reloj inteligente</h3><p>Información al alcance de tu mano.</p></div>
+        </article>
+        <article class="producto">
+          <div class="producto-imagen imagen-celular" role="img" aria-label="Celular"></div>
+          <div class="producto-info"><h3>Celular</h3><p>Conectividad en cualquier lugar.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Demostración: justify-content centra horizontalmente y align-items centra verticalmente. -->
+    <section class="seccion">
+      <div class="titulo-seccion">
+        <span class="tag">03 / ALINEACIÓN</span>
+        <h2>Prueba de alineación</h2>
+        <p>Los tres bloques están centrados horizontal y verticalmente.</p>
+      </div>
+      <div class="zona-alineacion">
+        <div class="bloque">A</div><div class="bloque">B</div><div class="bloque">C</div>
+      </div>
+    </section>
+
+    <!-- Pie: Flexbox separa el texto de los enlaces y permite que se acomoden en pantallas pequeñas. -->
+    <footer id="contacto">
+      <p>Práctico 1 · Maquetando con Flexbox</p>
+      <p>Realizado con HTML y CSS</p>
+    </footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,14 @@
+PRACTICO 1 - MAQUETANDO CON FLEXBOX
+
+1. Descomprimir la carpeta.
+2. Abrir index.html en el navegador para ver la página.
+3. Completar Nombre y Grupo en index.html si se desea.
+4. Para publicar en GitHub Pages, subir index.html y styles.css al repositorio.
+5. En GitHub: Settings > Pages > Deploy from a branch > elegir la rama principal y la carpeta /(root).
+
+La actividad incluye:
+- Alineación horizontal y vertical con justify-content y align-items.
+- Una maquetación propia como ejemplo del sketch.
+- Galería de productos usando display:flex, flex-wrap y gap.
+- Comentarios en HTML y CSS que explican el uso de Flexbox.
+- Diseño adaptable a celulares.
